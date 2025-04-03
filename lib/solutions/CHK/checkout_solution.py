@@ -127,7 +127,7 @@ def checkout(skus):
     count_v %= 2
     total += count_v * 50
 
-    total += item_counts["w"] * 20
+    total += item_counts["W"] * 20
 
     total += item_counts["X"] * 90
 
@@ -136,6 +136,7 @@ def checkout(skus):
     total += item_counts["Z"] * 50
     
     return total
+
 
 
 
