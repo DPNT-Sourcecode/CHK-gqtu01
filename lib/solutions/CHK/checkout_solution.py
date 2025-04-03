@@ -20,7 +20,18 @@ def checkout(skus):
     
     item_counts = {}
     for item in basket:
-        item_counts[item] = item_count
+        item_counts[item] = item_counts.get(item,0) + 1
+    
+    total = 0
+
+    for item, count in item_counts.items():
+        if item in special_offers:
+            offer_quantity, offer_price = special_offers[item]
+
+            offer_count = count // offer_quantity
+
+            remain = cou
+
 
 
 
