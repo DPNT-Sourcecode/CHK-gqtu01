@@ -14,7 +14,13 @@ def checkout(skus):
         'A': (3, 130),
         'B': (2,45)
     }
+    basket = skus.split(",")
+    if not all(item in prices for item in basket):
+        return -1
+    
+    item_counts = {}
+    for item in basket:
+        item_counts[item] = item_count
 
-    if not all(item in prices for ite)
 
 
