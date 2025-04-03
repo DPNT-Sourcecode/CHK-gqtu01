@@ -75,6 +75,20 @@ def checkout(skus):
 
     total += count_M * 15
 
+    total += item_counts["O"] * 10
+
+
+    count_p = item_counts["P"]
+    total += (count_p // 5) * 200
+    count_b %= 5
+    total += count_b * 50
+
+    count_r = item_counts['R']
+    free_q = count_r // 3
+    total += count_n * 50
+
+    count_M = max(0, item_counts["M"] - free_M)
+
 
 
 
@@ -82,6 +96,7 @@ def checkout(skus):
 
     
     return total
+
 
 
 
