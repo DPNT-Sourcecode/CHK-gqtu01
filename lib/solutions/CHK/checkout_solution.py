@@ -56,8 +56,8 @@ def checkout(skus):
     print(group_items)
 
     while len(group_items) >= 3:
-        total += 45
-        g
+        group_items = group_items[3:]
+        total += 45 
 
     for item in group_items:
         item_counts[item] = item_counts.get(item,0) + 1
@@ -131,6 +131,7 @@ def checkout(skus):
 
    
     return total
+
 
 
 
