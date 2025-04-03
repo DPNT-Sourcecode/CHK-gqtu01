@@ -10,11 +10,6 @@ def checkout(skus):
         'D': 15
     }
 
-    special_offers = {
-        'A': (3, 130),
-        'B': (2,45)
-    }
-
     if not skus:
         return 0
     basket = list(skus)
@@ -27,17 +22,8 @@ def checkout(skus):
     
     total = 0
 
-    for item, count in item_counts.items():
-        if item in special_offers:
-            offer_quantity, offer_price = special_offers[item]
-
-            offer_count = count // offer_quantity
-
-            remain = count % offer_quantity
-
-            total += (offer_count * offer_price) + (remain * prices[item])
-        else:
-
-            total += count * prices[item]
+    count_a = item_counts["A"]
+    total +
     
     return total
+
