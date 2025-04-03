@@ -11,6 +11,10 @@ def checkout(skus):
     }
 
     special_offers = {
-        
+        'A': (3, 130),
+        'B': (2,45)
     }
+
+    if not all(item in prices for ite)
+
 
