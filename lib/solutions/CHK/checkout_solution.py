@@ -89,10 +89,20 @@ def checkout(skus):
 
     while item_counts.get("H",0) >= 5:
         total += 45
+        item_counts["H"] -= 5
+    
+    while item_counts.get("K", 0) >= 2:
+        total += 120
+        item_counts["K"] -= 2
+
+    while item_counts.get("N",0) >= 3 and item_counts.get("M",0):
+        total += prices['N'] * 3
+        item_counts
 
 
    
     return total
+
 
 
 
