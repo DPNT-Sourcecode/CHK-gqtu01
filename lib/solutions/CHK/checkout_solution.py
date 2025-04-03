@@ -7,20 +7,21 @@ def checkout(skus):
         'A': 50,
         'B': 30,
         'C': 20,
-        'D': 15
+        'D': 15,
+        'E': 40,
     }
 
     if not skus:
         return 0
-    basket = list(skus)
-    if not all(item in prices for item in basket):
-        return -1
     
-    items_counts = Counter()
+    item_counts = Counter(skus)
+
+    if not all(item in prices for item in item_counts):
+        return -1
     
     total = 0
 
-    count_a = item_counts["A"]
+    count_a = item_counts.get("A",0)
     total += (count_a // 5) * 200
     count_a %= 5
     total += (count_a // 3) * 130
@@ -41,4 +42,5 @@ def checkout(skus):
     total += item_counts["D"] * 15
     
     return total
+
 
