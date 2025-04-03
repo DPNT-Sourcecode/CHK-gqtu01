@@ -117,6 +117,17 @@ def checkout(skus):
         total += prices["U"] * 3
         item_counts["U"] -= 4
 
+    while item_counts.get("V", 0) >= 3:
+        total += 130
+        item_counts["V"] -= 3
+    
+    while item_counts.get("V",0) >= 2:
+        total += 90
+        item_counts["V"] -= 2
+    
+    for item,count in item_counts.items():
+        total += prices[item] * count
 
    
     return total
+
