@@ -51,7 +51,9 @@ def checkout(skus):
         group_items.extend([item] * count)
         item_counts[item] = 0
 
+    
     group_items.sort(key=lambda x: prices[x], reverse=True)
+    print(group_items)
 
     while len(group_items) >= 3:
         total += 45
@@ -130,6 +132,7 @@ def checkout(skus):
 
    
     return total
+
 
 
 
