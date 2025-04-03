@@ -63,7 +63,7 @@ def checkout(skus):
 
     while item_counts.get("A", 0) >= 5:
         total += 200
-        item_counts -= 5
+        item_counts["A"] -= 5
 
     while item_counts.get('A',0) >= 3:
         total += 130
@@ -130,4 +130,5 @@ def checkout(skus):
 
    
     return total
+
 
