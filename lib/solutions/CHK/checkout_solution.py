@@ -38,9 +38,13 @@ def checkout(skus):
     count_b %= 2
     total += count_b * 30
 
+    count_f = item_counts.get("F",0)
+    payable_f = (count_f // 3)
+
     total += item_counts["C"] * 20
     total += item_counts["D"] * 15
     
     return total
+
 
 
