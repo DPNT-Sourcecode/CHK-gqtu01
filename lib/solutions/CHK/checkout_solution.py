@@ -136,9 +136,3 @@ def checkout(skus):
     total += item_counts["Z"] * 50
     
     return total
-
-
-
-
-
-
