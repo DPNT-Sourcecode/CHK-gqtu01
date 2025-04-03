@@ -30,8 +30,19 @@ def checkout(skus):
     total += count_a * 50
 
     count_e = item_counts['E']
-    free_b = count_e
+    free_b = count_e // 2
+    total += count_e * 40
+
+    count_b = max(0, item_counts["B"] - free_b)
+
+    total += (count_b // 2) * 45
+    count_b %= 2
+    total += count_b * 30
+
+    total += item_counts["C"] * 20
+    total += item_counts[""]
     
     return total
+
 
 
