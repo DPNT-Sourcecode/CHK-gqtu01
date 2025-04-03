@@ -48,6 +48,18 @@ def checkout(skus):
     total += item_counts["D"] * 15
 
     total += item_counts["G"] * prices['G']
+
+    count_h = item_counts.get("H",0)
+    total += (count_a // 10) * 80
+    count_h %= 10
+    total += (count_a // 5) * 45
+    count_h %= 5
+    total += count_h * 10
+
+    total += item_counts["I"] * 35
+
+    
     
     return total
+
 
