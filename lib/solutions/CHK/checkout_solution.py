@@ -30,7 +30,15 @@ def checkout(skus):
 
             offer_count = count // offer_quantity
 
-            remain = cou
+            remain = count % offer_quantity
+
+            total += (offer_count * offer_price) + (remain * prices[item])
+        else:
+
+            total += count * prices[item]
+    
+    return total
+
 
 
 
