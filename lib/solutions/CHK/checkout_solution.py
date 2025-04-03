@@ -58,8 +58,24 @@ def checkout(skus):
 
     total += item_counts["I"] * 35
 
+    total += item_counts["J"] * 60
+
+    count_k = item_counts["K"]
+    total += (count_a // 2) * 150
+    count_k %= 2
+    total += count_k * 80
+
+    total += item_counts["L"] * 90
+
+    total += item_counts["M"] * 15
+
     
+
+
+
+
     
     return total
+
 
 
