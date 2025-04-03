@@ -40,9 +40,10 @@ def checkout(skus):
     total += count_b * 30
 
     total += item_counts["C"] * 20
-    total += item_counts[""]
+    total += item_counts["D"] * 15
     
     return total
+
 
 
 
