@@ -69,15 +69,22 @@ def checkout(skus):
         total += 130
         item_counts['A'] -= 3
 
+    while item_counts.get("E", 0) >= 2 and item_counts.get('B', 0):
+        total += prices["E"] * 2
+        item_counts['E'] -= 2
+        item_counts["B"] -= 1
+
     while item_counts.get('B', 0) >= 2:
         total += 45
         item_counts['B'] -= 2
     
-    while item_counts.get("E", 0) >= 2 and item_counts.get('B', 0):
-        total +
+
+    while item_counts.get("F",0) >= 2:
+
 
    
     return total
+
 
 
 
