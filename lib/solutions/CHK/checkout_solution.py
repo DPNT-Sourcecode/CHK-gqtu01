@@ -95,7 +95,20 @@ def checkout(skus):
 
     total += item_counts["S"] * 30
 
-    total += item_counts["T"] * 90
+    total += item_counts["T"] * 20
+
+    count_u = item_counts.get("U",0)
+    payable_U = (count_u // 4) * 3 + (count_u % 4)
+    total += payable_U * 40
+
+    count_v = item_counts.get("V",0)
+    total += (count_v // 3) * 130
+    count_a %= 3
+    total += (count_a // 2) * 90
+    count_a %= 2
+    total += count_a * 50
+
+
 
 
 
@@ -106,9 +119,3 @@ def checkout(skus):
 
     
     return total
-
-
-
-
-
-
