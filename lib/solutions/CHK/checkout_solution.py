@@ -15,7 +15,8 @@ def checkout(skus):
         'B': (2,45)
     }
 
-    if not skus
+    if not skus:
+        return 0
     basket = list(skus)
     if not all(item in prices for item in basket):
         return -1
@@ -40,6 +41,7 @@ def checkout(skus):
             total += count * prices[item]
     
     return total
+
 
 
 
