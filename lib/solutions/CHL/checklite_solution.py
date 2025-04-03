@@ -43,4 +43,3 @@ def checklite(skus):
     total += item_counts["D"] * 15
     
     return total
-
