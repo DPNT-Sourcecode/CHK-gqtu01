@@ -1,5 +1,3 @@
-
-
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
@@ -43,6 +41,7 @@ def checkout(skus):
     total += item_counts["D"] * 15
     
     return total
+
 
 
 
