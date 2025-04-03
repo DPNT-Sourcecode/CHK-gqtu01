@@ -49,8 +49,13 @@ def checkout(skus):
     for item in group_discount_items:
         count = item_counts.get(item,0)
         group_items.extend([item] * count)
-        item_counts[item]
+        item_counts[item] = 0
 
+    group_items.sort(key=lambda x: prices[x], reverse=True)
+
+    while len(group_items) >= 3:
+        total += 45
+        for _
 
     count_a = item_counts.get("A",0)
     total += (count_a // 5) * 200
@@ -146,5 +151,6 @@ def checkout(skus):
     total += item_counts["Z"] * 50
     
     return total
+
 
 
