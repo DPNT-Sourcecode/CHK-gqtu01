@@ -23,7 +23,15 @@ def checkout(skus):
     total = 0
 
     count_a = item_counts["A"]
-    total +
+    total += (count_a // 5) * 200
+    count_a %= 5
+    total += (count_a // 3) * 130
+    count_a %= 3
+    total += count_a * 50
+
+    count_e = item_counts['E']
+    free_b = count_e
     
     return total
+
 
