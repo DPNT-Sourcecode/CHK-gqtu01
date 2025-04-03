@@ -17,7 +17,19 @@ def checkout(skus):
         'K': 80,
         'L': 90,
         'M': 15,
-        'N': 
+        'N': 40,
+        'O': 10,
+        'P': 50,
+        'Q': 30,
+        'R': 50,
+        'S': 30,
+        'T': 20,
+        'U': 40,
+        'V': 50,
+        'W': 20,
+        'X': 90,
+        "Y": 10,
+        "Z": 50
     }
 
     if not skus:
@@ -124,6 +136,7 @@ def checkout(skus):
     total += item_counts["Z"] * 50
     
     return total
+
 
 
 
