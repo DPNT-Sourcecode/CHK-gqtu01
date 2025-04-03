@@ -103,19 +103,18 @@ def checkout(skus):
 
     count_v = item_counts.get("V",0)
     total += (count_v // 3) * 130
-    count_a %= 3
-    total += (count_a // 2) * 90
-    count_a %= 2
-    total += count_a * 50
+    count_V %= 3
+    total += (count_V // 2) * 90
+    count_V %= 2
+    total += count_V * 50
 
+    total += item_counts["w"] * 20
 
+    total += item_counts["X"] * 90
 
+    total += item_counts["Y"] * 10
 
-
-
-
-
-
-
+    total += item_counts["Z"] * 50
     
     return total
+
