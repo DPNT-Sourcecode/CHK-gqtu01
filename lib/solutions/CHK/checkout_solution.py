@@ -67,15 +67,22 @@ def checkout(skus):
 
     total += item_counts["L"] * 90
 
-    total += item_counts["M"] * 15
+    count_n = item_counts['N']
+    free_M = count_n // 3
+    total += count_n * 40
 
-    
+    count_M = max(0, item_counts["M"] - free_M)
+
+    total += count_M * 15
+
+
 
 
 
 
     
     return total
+
 
 
 
