@@ -14,7 +14,7 @@ def checkout(skus):
         'H': 10,
         'I': 35,
         'J': 60,
-        'K': 80,
+        'K': 70,
         'L': 90,
         'M': 15,
         'N': 40,
@@ -22,14 +22,14 @@ def checkout(skus):
         'P': 50,
         'Q': 30,
         'R': 50,
-        'S': 30,
+        'S': 20,
         'T': 20,
         'U': 40,
         'V': 50,
         'W': 20,
-        'X': 90,
-        "Y": 10,
-        "Z": 50
+        'X': 17,
+        "Y": 20,
+        "Z": 21
     }
 
     if not skus:
@@ -41,6 +41,8 @@ def checkout(skus):
         return -1
     
     total = 0
+
+    group
 
     count_a = item_counts.get("A",0)
     total += (count_a // 5) * 200
@@ -136,3 +138,4 @@ def checkout(skus):
     total += item_counts["Z"] * 50
     
     return total
+
