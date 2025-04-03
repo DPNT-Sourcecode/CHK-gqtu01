@@ -1,5 +1,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
+
+from collections import Counter
 def checkout(skus):
     prices = {
         'A': 50,
@@ -14,9 +16,7 @@ def checkout(skus):
     if not all(item in prices for item in basket):
         return -1
     
-    item_counts = {}
-    for item in basket:
-        item_counts[item] = item_counts.get(item,0) + 1
+    items_counts = Counter()
     
     total = 0
 
@@ -41,3 +41,4 @@ def checkout(skus):
     total += item_counts["D"] * 15
     
     return total
+
