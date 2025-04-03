@@ -50,9 +50,9 @@ def checkout(skus):
     total += item_counts["G"] * prices['G']
 
     count_h = item_counts.get("H",0)
-    total += (count_a // 10) * 80
+    total += (count_h // 10) * 80
     count_h %= 10
-    total += (count_a // 5) * 45
+    total += (count_h // 5) * 45
     count_h %= 5
     total += count_h * 10
 
@@ -61,7 +61,7 @@ def checkout(skus):
     total += item_counts["J"] * 60
 
     count_k = item_counts["K"]
-    total += (count_a // 2) * 150
+    total += (count_k // 2) * 150
     count_k %= 2
     total += count_k * 80
 
@@ -117,4 +117,5 @@ def checkout(skus):
     total += item_counts["Z"] * 50
     
     return total
+
 
