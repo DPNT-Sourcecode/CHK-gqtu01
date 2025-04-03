@@ -9,6 +9,7 @@ def checkout(skus):
         'C': 20,
         'D': 15,
         'E': 40,
+        'F': 10
     }
 
     if not skus:
@@ -39,12 +40,10 @@ def checkout(skus):
     total += count_b * 30
 
     count_f = item_counts.get("F",0)
-    payable_f = (count_f // 3)
+    payable_f = (count_f // 3) * 2 + (count_f % 3)
+    total += payable_f * 10
 
     total += item_counts["C"] * 20
     total += item_counts["D"] * 15
     
     return total
-
-
-
