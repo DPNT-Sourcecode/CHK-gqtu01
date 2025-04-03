@@ -9,7 +9,8 @@ def checkout(skus):
         'C': 20,
         'D': 15,
         'E': 40,
-        'F': 10
+        'F': 10,
+        'G': 20
     }
 
     if not skus:
@@ -45,5 +46,8 @@ def checkout(skus):
 
     total += item_counts["C"] * 20
     total += item_counts["D"] * 15
+
+    total += item_counts["G"] * prices['G']
     
     return total
+
